@@ -10,4 +10,5 @@
 
 # Recommended
 [The Art of the Command Line](https://github.com/jlevy/the-art-of-command-line) : This would be enough to get you going.
-<img src="linux-readme-images/Linux-7.jpg" align="center" height=20px width=20px>
+
+[The Linux Command Line Bootcamp: Beginner To Power User | Colt Steele](https://www.udemy.com/course/the-linux-command-line-bootcamp/?couponCode=LETSLEARNNOWPP) : revision of beginner basics.
