@@ -46,3 +46,37 @@ mtime : ls              # Lists files based on modification time.
 ctime : ls -lc          # Lists files based on change time.
 
 atime : ls -lu          # Lists files based on access time.
+
+touch last_week -d "1 week ago"     # Creates a file named "last_week" with the modification timestamp set to 1 week ago.
+
+find -mmin +30                      # Finds files modified more than 30 minutes ago.
+
+find -mmin -60                      # Finds files modified less than 60 minutes ago.
+
+find -cmin +10                      # Finds files changed (permissions, ownership, etc.) more than 10 minutes ago.
+
+find -amin -20                      # Finds files accessed (read, written, or executed) less than 20 minutes ago.
+
+find -mtime -5                      # Finds files modified within the last 5 days.
+
+find -mtime +20                     # Finds files modified more than 20 days ago.
+
+find -name "*chick*" -or -name "*kitty*"    # Finds files with names containing "chick" or "kitty".
+
+find -type f -not -name "*.html"    # Finds files that are not HTML files.
+
+find -cmin -60 ! -name "*.log"      # Finds files changed within the last 60 minutes but not with a ".log" extension.
+
+find -exec command '{}' ';'         # Executes the specified command on each found file or directory.
+
+find ~ -type f -empty -exec ls -l  '{}' ';'   # Lists details of empty files in the home directory.
+
+find -name "*broken" -exec rm '{}' ';'        # Removes files with names containing "broken".
+
+find -name "*broken" -ok rm '{}' ';'         # Prompts before removing files with names containing "broken".
+
+find -type f -name "*.html" -exec cp '{}' '{}_backup' ';'   # Makes a backup copy of HTML files.
+
+find ~ -type f -empty | xargs ls -l      # Lists details of empty files in the home directory using xargs.
+
+echo folder1 folder2 | xargs mkdir      # Creates directories "folder1" and "folder2" using xargs.
