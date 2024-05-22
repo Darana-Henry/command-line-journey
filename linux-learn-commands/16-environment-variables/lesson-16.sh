@@ -20,3 +20,7 @@ login sessions:                  # Configuration files for login sessions.
 non-login sessions:              # Configuration files for non-login sessions.
 /etc/bash.bashrc                 # System-wide configuration file for non-login shells (on some systems).
 ~/.bashrc                        # User-specific configuration file for non-login shells.
+
+
+alias something = command
+ex: alias bark='echo woof'
